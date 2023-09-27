@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+  useEffect(()=>{
+  // setTimeout(axios.get('https://restoraunt.wuaze.com/?for=event').then(r=>console.log(r.data)), 10000)
+  // // console.log('fghghgvhvjhv')
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', 'https://restoraunt.wuaze.com/')
+  xhr.send()
+  }
+  , [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      фывапрол
     </div>
   );
 }
